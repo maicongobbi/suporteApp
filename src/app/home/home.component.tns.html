@@ -1,5 +1,61 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<ActionBar [title]="title"></ActionBar>
-<StackLayout  class="p-20">
-    <Label text="Welcome to {{ title }}!" class="h1 text-center" textWrap="true"></Label>
-</StackLayout>
+<ActionBar
+    title="SUPORTE CBMMS"
+    class="action-bar link "
+    android.iconVisibility="actionBarIfRoom"
+>
+    <ActionItem
+        android.systemIcon="ic_menu_set_as"
+        (tap)="openDrawer()"
+        android.position="right"
+    >
+    </ActionItem>
+
+    <ActionItem android.systemIcon="ic_menu_search_holo_dark">
+    </ActionItem>
+</ActionBar>
+<!-- menu do lado direito -->
+<RadSideDrawer
+    tkExampleTitle
+    tkToggleNavButton
+>
+    <GridLayout
+        tkDrawerContent
+        rows="56, *"
+        class="sideStackLayout"
+    >
+        <StackLayout class="sideTitleStackLayout">
+            <Label text="Menu de opções"></Label>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout">
+                <Label
+                [nsRouterLink]="['/buscar']"
+                    text="Buscar"
+                    class="sideLabel sideLightGrayLabel"
+                    (tap)="onProfileButtonTap()"
+                ></Label>
+                <Label
+                    text="Configurações"
+                    class="sideLabel"
+                    [nsRouterLink]="['/chat']"
+                ></Label>
+                <Label
+                    text="Sair"
+                    class="sideLabel"
+                ></Label>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+    <StackLayout tkMainContent>
+        <Label
+            [text]="'mainCodasssssssssssssssssdantentasdaText'"
+            textWrap="true"
+            class="drawerContentText"
+        ></Label>       
+        <Button text="First" [nsRouterLink]="['/buscar']" class="btn btn-primary btn-active" col="0"></Button>
+    </StackLayout>
+
+   
+</RadSideDrawer>
+<router-outlet></router-outlet>
