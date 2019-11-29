@@ -21,12 +21,12 @@ export const routes: Routes = [
     path: 'buscar',
     loadChildren: () => import('./buscar/buscar.module.tns').then(m => m.BuscarModule)
   },
-  {
+/*   {
     path: 'buscar/',
     loadChildren: () => import('./buscar/buscar.module.tns').then(m => m.BuscarModule)
-  },
-  {
-    path: 'lista/:index', 
+  }, */
+ /*  {
+    path: 'lista', 
     loadChildren: () => import('./lista/lista.module.tns').then(m => m.ListaModule)
-  },
+  }, */
 ];

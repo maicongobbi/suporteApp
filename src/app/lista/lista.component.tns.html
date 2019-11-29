@@ -1,1 +1,36 @@
-<Button text="lista works!" class="btn btn-primary"></Button>
+<Tabs selectedIndex="0">
+
+        <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+        <TabStrip>
+            <TabStripItem>
+                <Label text="Recebidas"></Label>
+             
+            </TabStripItem>
+            <TabStripItem >
+                <Label text="Enviadas"></Label>
+             
+            </TabStripItem>
+            <TabStripItem >
+                <Label text="Fechadas"></Label>
+             
+            </TabStripItem>
+        </TabStrip>
+    
+        <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+        <TabContentItem>
+            <GridLayout>
+                <Label text="Home Page" class="h2 text-center"></Label>
+            </GridLayout>
+        </TabContentItem>
+        <TabContentItem>
+            <GridLayout>
+                <Label text="Account Page" class="h2 text-center"></Label>
+            </GridLayout>
+        </TabContentItem>
+        <TabContentItem>
+            <GridLayout>
+                <Label text="Search Page" class="h2 text-center"></Label>
+            </GridLayout>
+        </TabContentItem>
+    
+    </Tabs>

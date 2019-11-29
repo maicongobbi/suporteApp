@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '@src/app/app-routing.module';
 import { AppComponent } from '@src/app/app.component';
 import { BuscarRoutingModule } from './buscar/buscar-routing.module.tns';
+import { ListaRoutingModule } from './lista/lista-routing.module';
 
 
 
@@ -14,7 +15,8 @@ import { BuscarRoutingModule } from './buscar/buscar-routing.module.tns';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BuscarRoutingModule
+    BuscarRoutingModule,
+    ListaRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

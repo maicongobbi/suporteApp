@@ -29,7 +29,7 @@
         <ScrollView row="1">
             <StackLayout class="sideStackLayout">
                 <Label
-                [nsRouterLink]="['/buscar']"
+                    [nsRouterLink]="['/lista']"
                     text="Buscar"
                     class="sideLabel sideLightGrayLabel"
                     (tap)="onProfileButtonTap()"
@@ -47,15 +47,7 @@
         </ScrollView>
     </GridLayout>
 
-    <StackLayout tkMainContent>
-        <Label
-            [text]="'mainCodasssssssssssssssssdantentasdaText'"
-            textWrap="true"
-            class="drawerContentText"
-        ></Label>       
-        <Button text="First" [nsRouterLink]="['/buscar']" class="btn btn-primary btn-active" col="0"></Button>
+    <StackLayout tkMainContent>       
+        <app-lista></app-lista>
     </StackLayout>
-
-   
 </RadSideDrawer>
-<router-outlet></router-outlet>

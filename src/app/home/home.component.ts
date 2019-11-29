@@ -48,10 +48,10 @@ export class HomeComponent implements OnInit {
     //  console.log("soli ", event.sol);
     //  console.log("soli2222 ", event);
 
-    this.routerExtensions.navigate([
-      'buscar',
-      ''
-    ], navigationsExtras)
+   /*  this.routerExtensions.navigate([
+      'lista'
+      
+    ]) */
   
   }
 
