@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChatComponent } from '@src/app/chat/chat.component';
+
 
 @NgModule({
-  declarations: [ChatComponent],
+  declarations: [],
   imports: [
     CommonModule
   ]

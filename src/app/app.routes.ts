@@ -12,15 +12,20 @@ export const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module.tns').then(m => m.HomeModule)
   },
-
-  {
+  /* {
     path: 'chat',
-    loadChildren: () => import('./chat/chat.module.tns').then(m => m.ChatModule)
+    loadChildren: () => import('./home/chat/chat.module.tns').then(m => m.ChatModule)
   },
+  {
+    path: 'chat/:id',
+    loadChildren: () => import('./home/chat/chat.module.tns').then(m => m.ChatModule)
+  },
+  
+
   {
     path: 'buscar',
     loadChildren: () => import('./buscar/buscar.module.tns').then(m => m.BuscarModule)
-  },
+  }, */
 /*   {
     path: 'buscar/',
     loadChildren: () => import('./buscar/buscar.module.tns').then(m => m.BuscarModule)

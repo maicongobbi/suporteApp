@@ -39,19 +39,24 @@ export class HomeComponent implements OnInit {
   onProfileButtonTap() {
     // Navigate to profile page here
     //alert("Navigate to profile page");
-    console.log('navegando para home');
+    console.log('navegando para home********');
     let navigationsExtras: NavigationExtras = {
       queryParams: {
-        id: 'this.items[event.index].id'
+        id: 20//this.items[event.index].id
       }
     }
+    console.log(navigationsExtras);
+    
     //  console.log("soli ", event.sol);
     //  console.log("soli2222 ", event);
 
-   /*  this.routerExtensions.navigate([
-      'lista'
+    this.routerExtensions.navigate([
+      'home/chat'
       
-    ]) */
+    ])
+   
+    return ;
+    
   
   }
 

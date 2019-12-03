@@ -29,7 +29,7 @@
         <ScrollView row="1">
             <StackLayout class="sideStackLayout">
                 <Label
-                    [nsRouterLink]="['/lista']"
+                    [nsRouterLink]="['/chat/1']"
                     text="Buscar"
                     class="sideLabel sideLightGrayLabel"
                     (tap)="onProfileButtonTap()"
@@ -37,6 +37,7 @@
                 <Label
                     text="Configurações"
                     class="sideLabel"
+                    (tap)="onProfileButtonTap()"
                     [nsRouterLink]="['/chat']"
                 ></Label>
                 <Label
@@ -48,6 +49,7 @@
     </GridLayout>
 
     <StackLayout tkMainContent>       
-        <app-lista></app-lista>
+        <app-tabs></app-tabs>
+      
     </StackLayout>
 </RadSideDrawer>

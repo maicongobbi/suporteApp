@@ -1,0 +1,54 @@
+<StackLayout>
+    <router-outlet></router-outlet>
+
+</StackLayout>
+<StackLayout>
+
+    <ListView
+        [items]="items"
+        class="list-group"
+        separatorColor="black"
+        (itemTap)="redirecionar($event)"
+        height="100%"
+    >
+        <ng-template
+            let-sol="item"
+            let-index='index'
+        >
+            <GridLayout
+                rows="auto,auto"
+                columns="auto,*, auto"
+            >
+                <Label
+                    row="0"
+                    col="0"
+                    rowSpan="2"
+                    [text]="sol.id"
+                    class="list-group-item"
+                    color="black"
+                ></Label>
+                <Label
+                    row="0"
+                    col="1"
+                    [text]="sol.autor"
+                    class="list-group-item"
+                    color="black"
+                ></Label>
+                <Label
+                    row="0"
+                    col="2"
+                    [text]="sol.unidade"
+                    class="list-group-item"
+                    color="black"
+                ></Label>
+                <Label
+                    row="1"
+                    col="1"
+                    [text]="sol.soli"
+                    class="list-group-item"
+                    color="black"
+                ></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</StackLayout>
