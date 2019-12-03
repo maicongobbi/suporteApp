@@ -1,2 +1,32 @@
-<Button text="chat works!" class="btn btn-primary"></Button>
-<Label text="aaaaaaaaaaaaaaaaaa\n\n\n\n\n\n\n\naaaaaaaaaaaaa" textWrap="true"></Label>
+<ActionBar
+title="SUPORTE CBMMS"
+class="action-bar link "
+android.iconVisibility="actionBarIfRoom"
+>
+<ActionItem
+    android.systemIcon="ic_menu_set_as"
+  
+    android.position="right"
+>
+</ActionItem>
+
+<StackLayout>
+
+    <ListView height="90%" margin-bottom="50" padding="5" #list [items]="chats$ | async">
+        <ng-template let-item="item">
+            <GridLayout columns="*" rows="auto" class="msg">
+                <StackLayout [class]="filter(item.from)" orientation="horizontal" [horizontalAlignment]="align(item.from)">                    
+                    <Label [text]='item.message' class="msg_text" textWrap="true" verticalAlignment="top"></Label>
+                </StackLayout>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+
+    <!-- <StackLayout #chatbox height="10%">
+        <GridLayout columns="*,auto" style="padding: 10">
+            <TextField #textfield class="chatTextField" row="0" col="0" [(ngModel)]="message"></TextField>
+            <Button #btn class="chatBtn" row="0" col="1" text="send" (tap)=chat(message)></Button>
+        </GridLayout>
+    </StackLayout> -->
+
+</StackLayout>

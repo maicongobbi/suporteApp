@@ -9,7 +9,8 @@ import { ListaRoutingModule } from './lista-routing.module';
   imports: [
     NativeScriptCommonModule,
     NativeScriptUISideDrawerModule,
-    ListaRoutingModule
+    ListaRoutingModule,
+    
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })

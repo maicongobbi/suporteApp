@@ -20,7 +20,7 @@ import { Observable } from "tns-core-modules/ui/page/page";
         
     ],
     declarations: [
-        HomeComponent, ListaComponent, TabsComponent, ChatComponent
+        HomeComponent, ListaComponent, TabsComponent, 
     ],
     schemas: [
         NO_ERRORS_SCHEMA

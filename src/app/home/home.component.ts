@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
     //  console.log("soli2222 ", event);
 
     this.routerExtensions.navigate([
-      'home/chat'
+      'chat'
       
     ])
    

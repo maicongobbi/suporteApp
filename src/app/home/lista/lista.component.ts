@@ -89,7 +89,7 @@ export class ListaComponent implements OnInit {
       //console.log("soli2222 ", event);
 
     this.routerExtensions.navigate([
-      '/home/chat',
+      'chat',
       soli.id
     ], navigationsExtras)
   }

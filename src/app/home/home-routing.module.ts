@@ -10,12 +10,11 @@ const routes: Routes = [
     {
         path: "",
         component: HomeComponent,
-        children: [
+      /*   children: [
             { path: "chat", component: ChatComponent },
             { path: "chat/:id", component: ChatComponent }
-        ]
+        ] */
     },
-
 ];
 
 @NgModule({

@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from '@src/app/home/home.component';
-
 export const routes: Routes = [
   {
     path: '',
@@ -12,7 +10,7 @@ export const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module.tns').then(m => m.HomeModule)
   },
-  /* {
+  {
     path: 'chat',
     loadChildren: () => import('./home/chat/chat.module.tns').then(m => m.ChatModule)
   },
@@ -25,7 +23,7 @@ export const routes: Routes = [
   {
     path: 'buscar',
     loadChildren: () => import('./buscar/buscar.module.tns').then(m => m.BuscarModule)
-  }, */
+  },
 /*   {
     path: 'buscar/',
     loadChildren: () => import('./buscar/buscar.module.tns').then(m => m.BuscarModule)
