@@ -45,25 +45,21 @@ export class HomeComponent implements OnInit {
         id: 20//this.items[event.index].id
       }
     }
-    console.log(navigationsExtras);
-    
+    console.log(navigationsExtras);    
     //  console.log("soli ", event.sol);
     //  console.log("soli2222 ", event);
 
     this.routerExtensions.navigate([
       'chat'
       
-    ])
-   
-    return ;
-    
+    ])   
+    return ;   
   
   }
 
   onDrawerButtonTap(): void {
-    console.log('btn direitaaaaaaaaaaaaaa');
-    const sideDrawer = <RadSideDrawer>app.getRootView();
-    sideDrawer.showDrawer();
+    console.log('btn direitaaaaaaaaaaaaaa');    
+    this.drawer.showDrawer()
   }
 
   public openDrawer() {

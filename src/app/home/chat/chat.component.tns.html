@@ -1,32 +1,76 @@
 <ActionBar
-title="SUPORTE CBMMS"
-class="action-bar link "
-android.iconVisibility="actionBarIfRoom"
+    [title]="solicitacao"
+    class="action-bar link "
+    android.iconVisibility="actionBarIfRoom"
 >
-<ActionItem
-    android.systemIcon="ic_menu_set_as"
-  
-    android.position="right"
->
-</ActionItem>
+    <NavigationButton
+        text="Back"
+        (tap)="goBack()"
+        android.systemIcon="ic_menu_back"
+    ></NavigationButton>
+</ActionBar>
 
 <StackLayout>
-
-    <ListView height="90%" margin-bottom="50" padding="5" #list [items]="chats$ | async">
-        <ng-template let-item="item">
-            <GridLayout columns="*" rows="auto" class="msg">
-                <StackLayout [class]="filter(item.from)" orientation="horizontal" [horizontalAlignment]="align(item.from)">                    
-                    <Label [text]='item.message' class="msg_text" textWrap="true" verticalAlignment="top"></Label>
+    <ListView
+        height="90%"
+        margin-bottom="50"
+        padding="5"
+        #list
+        [items]="chats$ | async"
+    >
+        <ng-template let-sol="item">
+            <GridLayout
+                columns="*"
+                rows="auto"
+                class="msg"
+            >
+                <StackLayout
+                    [class]="filter(sol)"
+                    orientation="horizontal"
+                    [horizontalAlignment]="align(sol)"
+                >
+                    <Label
+                        [text]='sol.soli'
+                        class="msg_text"
+                        textWrap="true"
+                        verticalAlignment="top"
+                    ></Label>
                 </StackLayout>
             </GridLayout>
+
+
         </ng-template>
     </ListView>
 
-    <!-- <StackLayout #chatbox height="10%">
-        <GridLayout columns="*,auto" style="padding: 10">
-            <TextField #textfield class="chatTextField" row="0" col="0" [(ngModel)]="message"></TextField>
-            <Button #btn class="chatBtn" row="0" col="1" text="send" (tap)=chat(message)></Button>
+    <StackLayout
+        #chatbox
+        height="10%"
+    >
+        <GridLayout
+            columns="*,auto"
+            style="padding: 10"
+        >
+            <!-- <TextField #textfield class="chatTextField" row="0" 
+            col="0" 
+            (returnPress)="onReturnPress($event)"
+            [text]="message"></TextField> -->
+            <TextView
+                hint="Digite algo..."
+                [(text)]="message"
+                (textChange)="onTextChange($event)"
+                #textfield
+                class="chatTextField"
+            >
+            </TextView>
+            <Button
+                #btn
+                class="chatBtn"
+                row="0"
+                col="1"
+                text="Enviar"
+                (tap)=chat(message)
+            ></Button>
         </GridLayout>
-    </StackLayout> -->
+    </StackLayout>
 
 </StackLayout>
