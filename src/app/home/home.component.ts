@@ -36,10 +36,8 @@ export class HomeComponent implements OnInit {
     this._changeDetectionRef.detectChanges();
   }
 
-  onProfileButtonTap() {
-    // Navigate to profile page here
-    //alert("Navigate to profile page");
-    console.log('navegando para home********');
+  onProfileButtonTap() {    
+    //alert("Navigate to profile page");    
     let navigationsExtras: NavigationExtras = {
       queryParams: {
         id: 20//this.items[event.index].id
@@ -50,7 +48,7 @@ export class HomeComponent implements OnInit {
     //  console.log("soli2222 ", event);
 
     this.routerExtensions.navigate([
-      'chat'
+      'buscar'
       
     ])   
     return ;   

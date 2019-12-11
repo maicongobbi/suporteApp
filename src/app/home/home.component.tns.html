@@ -30,7 +30,7 @@ android.iconVisibility="actionBarIfRoom"
         <ScrollView row="1">
             <StackLayout class="sideStackLayout">
                 <Label
-                    [nsRouterLink]="['/chat/1']"
+                    [nsRouterLink]="['/buscar']"
                     text="Buscar"
                     class="sideLabel sideLightGrayLabel"
                     (tap)="onProfileButtonTap()"
@@ -38,8 +38,7 @@ android.iconVisibility="actionBarIfRoom"
                 <Label
                     text="Configurações"
                     class="sideLabel"
-                    (tap)="onProfileButtonTap()"
-                    [nsRouterLink]="['/chat']"
+                    (tap)="onProfileButtonTap()"                    
                 ></Label>
                 <Label
                     text="Sair"

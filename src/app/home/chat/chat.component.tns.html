@@ -1,3 +1,4 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="teste">
 <ActionBar
     [title]="solicitacao"
     class="action-bar link "
@@ -11,7 +12,7 @@
 </ActionBar>
 
 <StackLayout>
-    <ListView
+        <RadListView
         height="90%"
         margin-bottom="50"
         padding="5"
@@ -40,7 +41,7 @@
 
 
         </ng-template>
-    </ListView>
+        </RadListView>
 
     <StackLayout
         #chatbox
@@ -74,3 +75,4 @@
     </StackLayout>
 
 </StackLayout>
+</Page>

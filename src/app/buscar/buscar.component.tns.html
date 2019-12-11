@@ -1,1 +1,47 @@
-<Button text="buscar works!" class="btn btn-primary"></Button>
+<ActionBar
+    title="Buscar solicitação"
+    class="action-bar link "
+    android.iconVisibility="actionBarIfRoom"
+>
+    <NavigationButton
+        text="Back"
+        (tap)="goBack()"
+        android.systemIcon="ic_menu_back"
+    ></NavigationButton>
+</ActionBar>
+<StackLayout>
+
+   
+
+        <GridLayout
+        style="height: 15% ; min-height: 15%;"
+            columns="*,auto"
+          
+        >
+            <TextView
+                style="background-color: aqua;"
+                hint="Digite o id da solicitação"
+                [(text)]="idBuscado"
+                (textChange)="onTextChange($event)"
+                #textField
+                keyboardType="number"
+                class="chatTextField"
+            >
+            </TextView>
+
+            <Button
+                class="chatBtn"
+                row="0"
+                col="1"
+                text="Buscar"
+                (tap)=buscar()
+            ></Button>
+        </GridLayout>  
+    <StackLayout height="70%">
+        <Label
+            text="asdasdasdasd"
+            textWrap="true"
+        ></Label>
+
+    </StackLayout>
+</StackLayout>

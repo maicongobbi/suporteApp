@@ -15,7 +15,8 @@ export class ListaComponent implements OnInit {
     private routerExtensions: RouterExtensions,
     private router1: Router,
     private changeDetect: ChangeDetectorRef
-) { } solicitacoes = []
+) { } 
+  solicitacoes = []
   unidades = []
   autor = []
 
